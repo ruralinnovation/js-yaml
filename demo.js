@@ -15754,11 +15754,8 @@ function parse() {
     obj = jsyaml.load(str, { schema: SEXY_SCHEMA });
 
     result.setOption('mode', 'text/plain');
-    // const val = inspect(obj, false, 10)
-    // console.log(val)
+    console.log('JSON:', JSON.stringify(obj))
     result.setValue(JSON.stringify(obj));
-    console.log('obj', obj)
-    console.log('obj', JSON.stringify(obj))
   } catch (err) {
     console.error(err)
     result.setOption('mode', 'text/plain');
